@@ -11,6 +11,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_85wjt")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 300.0
+one_shot = true
+
+
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -110,13 +115,24 @@ grow_vertical = 2
 text = "Zarejestruj się"
 
 [node name="Warning" type="Label" parent="Background"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 70.0
+offset_right = 200.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 300.0
-one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 
 [connection signal="text_changed" from="Background/Login" to="." method="_on_login_text_changed"]
 [connection signal="text_submitted" from="Background/Login" to="." method="_on_login_text_submitted"]
@@ -124,4 +140,3 @@ one_shot = true
 [connection signal="text_submitted" from="Background/Haslo" to="." method="_on_haslo_text_submitted"]
 [connection signal="pressed" from="Background/SignIn" to="." method="_on_sign_in_pressed"]
 [connection signal="pressed" from="Background/Register" to="." method="_on_register_pressed"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
