@@ -1,0 +1,24 @@
+extends Node
+
+var current_scene_name
+var save_path = "user://save.json"
+var loading = false
+
+var login_data = {}
+
+signal scene_changed()
+
+func _ready() -> void:
+	current_scene_name = get_tree().get_current_scene().name
+
+func change_scene(scene_path):
+	current_scene_name = scene_path.get_file().get_basename()
+	var current_scene = get_tree().get_root().get_child(get_tree().get_root().get_child_count() - 1)
+	current_scene.queue_free()
+	var new_scene = load(scene_path).instantiate()
+	get_tree().get_root().call_deferred("add_child", new_scene) 
+	get_tree().call_deferred("set_current_scene", new_scene)    
+	call_deferred("post_scene_change_initialization")
+	
+func post_scene_change_initialization():
+	scene_changed.emit()
