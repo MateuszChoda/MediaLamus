@@ -11,13 +11,11 @@ config_version=5
 [application]
 
 config/name="MediaLamus"
+run/main_scene="uid://b2md5qoi0oyxh"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
-
-[display]
-
-window/handheld/orientation=1
 
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
