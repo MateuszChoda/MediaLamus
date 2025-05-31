@@ -1,4 +1,8 @@
-[gd_scene format=3 uid="uid://ttpyju4bjgoo"]
+[gd_scene load_steps=4 format=3 uid="uid://bu5euaxyuuohy"]
+
+[ext_resource type="Texture2D" uid="uid://7ctyucrbyybl" path="res://img/filter-icon.jpg" id="1_o13rx"]
+[ext_resource type="Texture2D" uid="uid://dhka1r7vq5yn3" path="res://img/cart.png" id="2_i7cyh"]
+[ext_resource type="Texture2D" uid="uid://4kh527c6v3js" path="res://img/home-icon.png" id="2_w2f1l"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -27,14 +31,182 @@ theme_override_font_sizes/font_size = 38
 text = "Witaj
 "
 
-[node name="LineEdit" type="LineEdit" parent="ColorRect"]
+[node name="Searchbar" type="LineEdit" parent="ColorRect"]
 layout_mode = 1
 offset_left = 30.0
-offset_top = 105.0
-offset_right = 530.0
-offset_bottom = 145.0
+offset_top = 120.0
+offset_right = 545.0
+offset_bottom = 170.0
 
-[node name="TextureButton" type="TextureButton" parent="ColorRect"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Filters_btn" type="TextureButton" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -76.0
+offset_top = 119.0
+offset_right = 424.0
+offset_bottom = 619.0
+grow_horizontal = 0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("1_o13rx")
+
+[node name="Button" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -293.0
+offset_top = -326.0
+offset_right = 293.0
+offset_bottom = -226.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "AGD"
+
+[node name="Button2" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -293.0
+offset_top = -206.0
+offset_right = 293.0
+offset_bottom = -106.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "RTV
+
+"
+
+[node name="Button3" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -293.0
+offset_top = -86.0
+offset_right = 293.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "KOMPUTERY OSOBISTE
+"
+
+[node name="Button4" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -293.0
+offset_top = 34.0
+offset_right = 293.0
+offset_bottom = 134.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SMARTFONY
+"
+
+[node name="Button5" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -293.0
+offset_top = 154.0
+offset_right = 293.0
+offset_bottom = 254.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "AUDIO
+"
+
+[node name="Button6" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -293.0
+offset_top = 274.0
+offset_right = 293.0
+offset_bottom = 374.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "GAMING
+
+"
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -324.0
+offset_top = 424.0
+offset_right = 324.0
+offset_bottom = 574.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.314033, 0.414383, 0.657094, 1)
+
+[node name="Cart_btn3" type="TextureButton" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 211.0
+offset_top = 482.0
+offset_right = 723.0
+offset_bottom = 994.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.09, 0.09)
+texture_normal = ExtResource("2_w2f1l")
+
+[node name="Cart_btn2" type="TextureButton" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -259.0
+offset_top = 481.0
+offset_right = 253.0
+offset_bottom = 993.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.09, 0.09)
+texture_normal = ExtResource("2_w2f1l")
+
+[node name="Cart_btn" type="TextureButton" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = 475.0
+offset_right = 488.0
+offset_bottom = 987.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("2_i7cyh")
