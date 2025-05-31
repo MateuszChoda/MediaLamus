@@ -46,7 +46,7 @@ func _on_login_text_submitted(new_text: String) -> void:
 
 func _on_sign_in_pressed() -> void:
 	if login.text != "" and password.text != "":
-		Global.sign_in_pressed(login.text, password.text, "")
+		Global.sign_in_pressed(login.text, password.text, "res://Base/main_screen.tscn")
 	else:
 		warning.text = "Podaj email i hasło!"
 		warning.visible = true
