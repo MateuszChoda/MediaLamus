@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://b2md5qoi0oyxh"]
+[gd_scene load_steps=2 format=3 uid="uid://b2md5qoi0oyxh"]
+
+[ext_resource type="Script" uid="uid://basnav6i7lhxj" path="res://Scripts/login_screen.gd" id="1_85wjt"]
 
 [node name="LoginScreen" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_85wjt")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -91,7 +94,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Zaloguj"
 
-[node name="Button" type="Button" parent="Background"]
+[node name="Register" type="Button" parent="Background"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
