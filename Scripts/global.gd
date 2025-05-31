@@ -4,9 +4,13 @@ var current_scene_name
 var save_path = "user://save.json"
 var loading = false
 
+enum ProductTypes {AGD, RTV, PERSONAL_COMPUTER, SMARTPHONE, AUDIO, GAMING}
+
 var login_data = {
 	"admin": "admin"
 }
+
+var products = {}
 
 signal scene_changed
 signal wrong_password

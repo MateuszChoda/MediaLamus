@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcc3r1fhncu72"]
+
+[ext_resource type="Script" uid="uid://craw0v52mdyst" path="res://Scripts/product_template.gd" id="1_at82h"]
+[ext_resource type="Texture2D" uid="uid://423f3vr1014e" path="res://img/profile-icon.png" id="2_5r6uv"]
+
+[node name="Template" type="ColorRect"]
+layout_direction = 2
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 100.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.507233, 0.31501, 0.600562, 1)
+script = ExtResource("1_at82h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(50, 50)
+scale = Vector2(0.19, 0.19)
+texture = ExtResource("2_5r6uv")
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = -50.0
+offset_right = 319.0
+offset_bottom = 50.0
+grow_vertical = 2
+text = "Lorem Ipsum Dolor Sit Amet"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Price" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -50.0
+offset_bottom = 50.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "placeholder"
+horizontal_alignment = 1
+vertical_alignment = 1

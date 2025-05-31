@@ -15,7 +15,6 @@ script = ExtResource("1_85wjt")
 wait_time = 300.0
 one_shot = true
 
-
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -133,7 +132,6 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-
 [connection signal="text_changed" from="Background/Login" to="." method="_on_login_text_changed"]
 [connection signal="text_submitted" from="Background/Login" to="." method="_on_login_text_submitted"]
 [connection signal="text_changed" from="Background/Haslo" to="." method="_on_haslo_text_changed"]
