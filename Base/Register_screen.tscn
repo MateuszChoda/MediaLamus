@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dpd3cgsx6h8b0" path="res://Scripts/register_screen.gd" id="1_rh3ov"]
 
+
 [node name="RegisterScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -103,13 +104,41 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -220.0
 offset_top = 38.0
-offset_right = -106.0
+offset_right = -105.99
 offset_bottom = 61.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Powtórz hasło:"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Button" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = 76.0
+offset_right = 70.0
+offset_bottom = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Zarejestruj się"
+
+[node name="Button2" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 35.0
+offset_top = -92.0
+offset_right = 182.0
+offset_bottom = -38.0
+grow_vertical = 0
+text = "Powrót do ekranu
+logowania"
 
 [node name="Warning" type="Label" parent="ColorRect"]
 layout_mode = 0
@@ -122,3 +151,4 @@ offset_bottom = 23.0
 [connection signal="text_submitted" from="ColorRect/Haslo" to="." method="_on_haslo_text_submitted"]
 [connection signal="text_changed" from="ColorRect/Haslo2" to="." method="_on_haslo_2_text_changed"]
 [connection signal="text_submitted" from="ColorRect/Haslo2" to="." method="_on_haslo_2_text_submitted"]
+
