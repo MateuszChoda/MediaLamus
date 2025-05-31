@@ -11,6 +11,7 @@ var login_data = {
 signal scene_changed
 signal wrong_password
 signal wrong_login
+signal mismatched_password
 
 func _ready() -> void:
 	current_scene_name = get_tree().get_current_scene().name
@@ -33,5 +34,15 @@ func sign_in_pressed(login, password, scene_path):
 			change_scene(scene_path)
 		else:
 			wrong_password.emit()
+	else:
+		wrong_login.emit()
+
+func register_pressed(login, password, passconf, scene_path):
+	if login_data.has(login) == false:
+		if password == passconf:
+			login_data.set(login, password)
+			change_scene(scene_path)
+		else:
+			mismatched_password.emit()
 	else:
 		wrong_login.emit()

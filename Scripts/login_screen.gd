@@ -30,7 +30,7 @@ func _on_haslo_text_changed(new_text: String) -> void:
 
 func _on_haslo_text_submitted(new_text: String) -> void:
 	if login.text != "":
-		pass
+		Global.sign_in_pressed(login.text, password.text, "res://Base/main_screen.tscn")
 	else:
 		warning.text = "Podaj adres email!"
 		warning.visible = true
@@ -38,7 +38,7 @@ func _on_haslo_text_submitted(new_text: String) -> void:
 
 func _on_login_text_submitted(new_text: String) -> void:
 	if password.text != "":
-		pass
+		Global.sign_in_pressed(login.text, password.text, "res://Base/main_screen.tscn")
 	else:
 		warning.text = "Podaj hasło!"
 		warning.visible = true
@@ -47,9 +47,6 @@ func _on_login_text_submitted(new_text: String) -> void:
 func _on_sign_in_pressed() -> void:
 	if login.text != "" and password.text != "":
 		Global.sign_in_pressed(login.text, password.text, "res://Base/main_screen.tscn")
-	else:
-		warning.text = "Podaj email i hasło!"
-		warning.visible = true
 
 
 func _on_register_pressed() -> void:
