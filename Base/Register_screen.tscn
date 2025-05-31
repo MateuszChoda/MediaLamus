@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dpd3cgsx6h8b0" path="res://Scripts/register_screen.gd" id="1_rh3ov"]
 
+
 [node name="RegisterScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -138,6 +139,7 @@ offset_bottom = -38.0
 grow_vertical = 0
 text = "Powrót do ekranu
 logowania"
+
 [node name="Warning" type="Label" parent="ColorRect"]
 layout_mode = 0
 offset_right = 40.0
@@ -149,3 +151,4 @@ offset_bottom = 23.0
 [connection signal="text_submitted" from="ColorRect/Haslo" to="." method="_on_haslo_text_submitted"]
 [connection signal="text_changed" from="ColorRect/Haslo2" to="." method="_on_haslo_2_text_changed"]
 [connection signal="text_submitted" from="ColorRect/Haslo2" to="." method="_on_haslo_2_text_submitted"]
+
