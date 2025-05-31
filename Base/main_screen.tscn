@@ -30,11 +30,28 @@ text = "Witaj
 [node name="LineEdit" type="LineEdit" parent="ColorRect"]
 layout_mode = 1
 offset_left = 30.0
-offset_top = 105.0
-offset_right = 530.0
-offset_bottom = 145.0
+offset_top = 120.0
+offset_right = 545.0
+offset_bottom = 160.0
 
 [node name="TextureButton" type="TextureButton" parent="ColorRect"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -78.0
+offset_top = 120.0
+offset_right = -38.0
+offset_bottom = 160.0
+grow_horizontal = 0
+
+[node name="TextureButton2" type="TextureButton" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -78.0
+offset_top = 30.0
+offset_right = -38.0
+offset_bottom = 70.0
+grow_horizontal = 0
