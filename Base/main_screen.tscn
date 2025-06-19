@@ -1,8 +1,5 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=6 format=3 uid="uid://dbukptdxj0cb8"]
-=======
+
 [gd_scene load_steps=7 format=3 uid="uid://p6ti5rlpxyux"]
->>>>>>> Stashed changes
 
 [ext_resource type="Script" uid="uid://cv4787yyv4i4u" path="res://Scripts/main_screen.gd" id="1_2l88s"]
 [ext_resource type="Texture2D" uid="uid://7ctyucrbyybl" path="res://img/filter-icon.jpg" id="1_o13rx"]
@@ -10,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://4kh527c6v3js" path="res://img/home-icon.png" id="2_w2f1l"]
 [ext_resource type="Texture2D" uid="uid://423f3vr1014e" path="res://img/profile-icon.png" id="3_fl6ef"]
 [ext_resource type="PackedScene" uid="uid://58fhia6fwvjx" path="res://Base/product_list.tscn" id="4_w2f1l"]
+
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -171,7 +169,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.314033, 0.414383, 0.657094, 1)
 
-<<<<<<< Updated upstream
 [node name="Profile_btn" type="TextureButton" parent="ColorRect/ColorRect"]
 layout_mode = 1
 anchors_preset = 8
@@ -186,10 +183,9 @@ offset_bottom = 494.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.09, 0.09)
-texture_normal = ExtResource("3_fl6ef")
+texture_normal = ExtResource("2_2l88s")
 
-=======
->>>>>>> Stashed changes
+
 [node name="Home_btn" type="TextureButton" parent="ColorRect/ColorRect"]
 layout_mode = 1
 anchors_preset = 8
@@ -197,17 +193,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-<<<<<<< Updated upstream
 offset_left = -259.0
 offset_top = -18.0
 offset_right = 253.0
 offset_bottom = 494.0
-=======
-offset_left = -146.0
-offset_top = -20.0
-offset_right = 366.0
-offset_bottom = 492.0
->>>>>>> Stashed changes
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.09, 0.09)
@@ -220,17 +209,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-<<<<<<< Updated upstream
 offset_left = -24.0
 offset_top = -18.0
 offset_right = 488.0
 offset_bottom = 494.0
-=======
-offset_left = 89.0
-offset_top = -20.0
-offset_right = 601.0
-offset_bottom = 492.0
->>>>>>> Stashed changes
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.1, 0.1)
