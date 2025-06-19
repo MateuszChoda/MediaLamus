@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b71u50xarrivl"]
+[gd_scene load_steps=4 format=3 uid="uid://b71u50xarrivl"]
 
 [ext_resource type="Texture2D" uid="uid://423f3vr1014e" path="res://img/profile-icon.png" id="1_y3s5l"]
 [ext_resource type="Texture2D" uid="uid://4kh527c6v3js" path="res://img/home-icon.png" id="2_ee2du"]
 [ext_resource type="Texture2D" uid="uid://dhka1r7vq5yn3" path="res://img/cart.png" id="3_73oxm"]
-[ext_resource type="Texture2D" uid="uid://bbqhh7cgkdxpc" path="res://img/free-plus-icon-3107-thumb.png" id="4_3japs"]
 
 [node name="ColorRect" type="ColorRect"]
 anchors_preset = 15
@@ -76,99 +75,6 @@ grow_vertical = 2
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("3_73oxm")
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -286.0
-offset_top = -326.0
-offset_right = 287.0
-offset_bottom = -123.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.313726, 0.415686, 0.658824, 1)
-
-[node name="Button2" type="Button" parent="ColorRect2"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 111.02
-offset_top = 12.545
-offset_right = 274.02
-offset_bottom = 73.545
-grow_horizontal = 2
-grow_vertical = 2
-text = "usuń z koszyka"
-
-[node name="Button" type="Button" parent="ColorRect2"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 111.02
-offset_top = -69.17
-offset_right = 274.02
-offset_bottom = -8.17
-grow_horizontal = 2
-grow_vertical = 2
-text = "Przejdź do płatności"
-
-[node name="ColorRect3" type="ColorRect" parent="ColorRect2"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -260.655
-offset_top = 39.32
-offset_right = -220.655
-offset_bottom = 79.32
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="ColorRect2"]
-modulate = Color(0, 0, 0, 1)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -256.655
-offset_top = 43.32
-offset_right = -224.655
-offset_bottom = 75.32
-grow_horizontal = 2
-grow_vertical = 2
-text = "1"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TextureButton" type="TextureButton" parent="ColorRect2"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -213.5
-offset_top = 48.375
-offset_right = 298.5
-offset_bottom = 560.375
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.045, 0.045)
-texture_normal = ExtResource("4_3japs")
-
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
@@ -182,3 +88,403 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 29
 text = "Twój koszyk jest pusty"
 horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 214.0
+offset_bottom = 662.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+custom_minimum_size = Vector2(648, 100)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 274.515
+offset_right = 200.0
+offset_bottom = 349.515
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "Przejdź dalej
+"
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = 92.0
+offset_right = 300.0
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.425
+offset_top = 145.0
+offset_right = 101.575
+offset_bottom = 173.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Łączna wartość produktów:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 107.205
+offset_top = 145.455
+offset_right = 153.205
+offset_bottom = 173.455
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "1000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -306.0
+offset_top = -456.0
+offset_right = 307.0
+offset_bottom = 413.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.160784, 0.227451, 0.392157, 1)
+
+[node name="LineEdit" type="LineEdit" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.815
+offset_top = 181.265
+offset_right = -23.815
+offset_bottom = 224.265
+grow_horizontal = 2
+grow_vertical = 2
+text = "Metoda płatności"
+alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="ColorRect3/LineEdit"]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 1.0
+offset_right = 408.0
+offset_bottom = 44.0
+selected = 0
+item_count = 5
+popup/item_0/text = "płatność kartą"
+popup/item_0/id = 0
+popup/item_1/text = "Za pobraniem"
+popup/item_1/id = 1
+popup/item_2/text = "Gotówka (odbiór osobisty)"
+popup/item_2/id = 2
+popup/item_3/text = "płatność BLIK"
+popup/item_3/id = 3
+popup/item_4/text = "Przelewy 24"
+popup/item_4/id = 4
+
+[node name="LineEdit2" type="LineEdit" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.815
+offset_top = 250.825
+offset_right = -23.815
+offset_bottom = 293.825
+grow_horizontal = 2
+grow_vertical = 2
+text = "Metoda dostawy"
+alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="ColorRect3/LineEdit2"]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 1.0
+offset_right = 447.0
+offset_bottom = 44.0
+selected = 0
+item_count = 2
+popup/item_0/text = "Kurier"
+popup/item_0/id = 0
+popup/item_1/text = "Odbiór w sklepie"
+popup/item_1/id = 1
+
+[node name="LineEdit3" type="LineEdit" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_right = 75.5
+offset_bottom = 31.0
+grow_horizontal = 2
+text = "Dane kontaktowe"
+alignment = 1
+
+[node name="LineEdit3" type="LineEdit" parent="ColorRect3/LineEdit3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 80.0
+offset_right = 200.0
+offset_bottom = 120.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 73.0
+grow_horizontal = 2
+text = "Kraj dostawy"
+horizontal_alignment = 1
+
+[node name="LineEdit4" type="LineEdit" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 165.0
+offset_right = 200.0
+offset_bottom = 205.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="LineEdit5" type="LineEdit" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 250.0
+offset_right = 200.0
+offset_bottom = 290.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Label3" type="Label" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 135.0
+offset_right = 50.0
+offset_bottom = 158.0
+grow_horizontal = 2
+text = "Imię i nazwisko"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 220.0
+offset_right = 50.0
+offset_bottom = 243.0
+grow_horizontal = 2
+text = "Adres e-mail"
+horizontal_alignment = 1
+
+[node name="LineEdit6" type="LineEdit" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 335.0
+offset_right = 200.0
+offset_bottom = 375.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Label5" type="Label" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 305.0
+offset_right = 50.0
+offset_bottom = 328.0
+grow_horizontal = 2
+text = "Ulica"
+horizontal_alignment = 1
+
+[node name="LineEdit7" type="LineEdit" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -199.5
+offset_top = 420.0
+offset_right = -31.5
+offset_bottom = 460.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="LineEdit8" type="LineEdit" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -19.5
+offset_top = 420.0
+offset_right = 199.5
+offset_bottom = 460.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Label6" type="Label" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -163.185
+offset_top = 390.0
+offset_right = -63.185
+offset_bottom = 413.0
+grow_horizontal = 2
+text = "Nr domu"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 2.0
+offset_top = 390.0
+offset_right = 177.0
+offset_bottom = 413.0
+grow_horizontal = 2
+text = "Kod pocztowy"
+horizontal_alignment = 1
+
+[node name="LineEdit9" type="LineEdit" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 505.0
+offset_right = 200.0
+offset_bottom = 545.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Label8" type="Label" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -62.0
+offset_top = 475.0
+offset_right = 62.0
+offset_bottom = 498.0
+grow_horizontal = 2
+text = "Numer telefonu"
+horizontal_alignment = 1
+
+[node name="LineEdit10" type="LineEdit" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_right = 75.5
+offset_bottom = 31.0
+grow_horizontal = 2
+text = "Dane kontaktowe"
+alignment = 1
+
+[node name="LineEdit3" type="LineEdit" parent="ColorRect3/LineEdit10"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 80.0
+offset_right = 200.0
+offset_bottom = 120.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="LineEdit11" type="LineEdit" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.5
+offset_top = -309.0
+offset_right = 80.5
+offset_bottom = -278.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Płatność i dostawa"
+alignment = 1
+
+[node name="Button" type="Button" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -84.085
+offset_right = 100.0
+offset_bottom = -34.085
+grow_horizontal = 2
+grow_vertical = 0
+text = "Sfinaliuj zakup"
