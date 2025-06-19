@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2r3d7bjjexfe"]
+
+[ext_resource type="Script" uid="uid://c0id2bp53vh0t" path="res://Scripts/confirm_rect.gd" id="1_cd4f0"]
+
+[node name="ConfirmPopup" type="ColorRect"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -100.0
+offset_right = 200.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.313726, 0.415686, 0.658824, 1)
+script = ExtResource("1_cd4f0")
+
+[node name="reject_btn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -73.0
+offset_top = -51.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Cofnij"
+
+[node name="confirm_btn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -51.0
+offset_right = 106.0
+offset_bottom = -20.0
+grow_vertical = 0
+text = "Potwierdź"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 60.0
+offset_top = 30.0
+offset_right = 340.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 20
+text = "Czy na pewno chcesz usunąć ten produkt z koszyka?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="reject_btn" to="." method="_on_reject_btn_pressed"]
+[connection signal="pressed" from="confirm_btn" to="." method="_on_confirm_btn_pressed"]

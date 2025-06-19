@@ -1,23 +1,20 @@
-
 [gd_scene load_steps=7 format=3 uid="uid://bbv1gx8d1vsog"]
-
 
 [ext_resource type="Script" uid="uid://daxsmbguqc50k" path="res://Scripts/admin_screen.gd" id="1_dix53"]
 [ext_resource type="Texture2D" uid="uid://4kh527c6v3js" path="res://img/home-icon.png" id="2_3d02y"]
-[ext_resource type="Texture2D" uid="uid://423f3vr1014e" path="res://img/profile-icon.png" id="2_qa5fi"]
 [ext_resource type="Texture2D" uid="uid://dhka1r7vq5yn3" path="res://img/cart.png" id="3_qa5fi"]
 [ext_resource type="Texture2D" uid="uid://7ctyucrbyybl" path="res://img/filter-icon.jpg" id="4_kjk8t"]
+[ext_resource type="PackedScene" uid="uid://713c3k6r77vh" path="res://Base/product_list.tscn" id="5_3d02y"]
+[ext_resource type="PackedScene" uid="uid://wkcjukve200j" path="res://Base/confirm_popup.tscn" id="6_qa5fi"]
 
-[ext_resource type="PackedScene" uid="uid://58fhia6fwvjx" path="res://Base/product_list.tscn" id="5_3d02y"]
-
-
-[node name="Admin_Screen" type="Control"]
+[node name="admin_screen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_dix53")
 
 [node name="BackgroundRect" type="ColorRect" parent="."]
@@ -421,9 +418,14 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="ProductList" parent="." instance=ExtResource("5_3d02y")]
+visible = false
 layout_mode = 0
 offset_top = 200.0
 offset_bottom = 986.0
+
+[node name="ConfirmPopup" parent="." instance=ExtResource("6_qa5fi")]
+visible = false
+layout_mode = 1
 
 [connection signal="pressed" from="BackgroundRect/ColorRect/Home_btn" to="." method="_on_home_btn_pressed"]
 [connection signal="pressed" from="BackgroundRect/ColorRect/Cart_btn" to="." method="_on_cart_btn_pressed"]

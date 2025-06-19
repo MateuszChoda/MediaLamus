@@ -1,21 +1,19 @@
-
 [gd_scene load_steps=5 format=3 uid="uid://b71u50xarrivl"]
 
-[ext_resource type="Script" uid="uid://bkasjj2obcd8n" path="res://Scripts/cart_screen.gd" id="1_y3s5l"]
-[ext_resource type="Texture2D" uid="uid://423f3vr1014e" path="res://img/profile-icon.png" id="1_y3s5l"]
+[ext_resource type="Script" uid="uid://bkasjj2obcd8n" path="res://Scripts/cart_screen.gd" id="1_pmglc"]
 [ext_resource type="Texture2D" uid="uid://4kh527c6v3js" path="res://img/home-icon.png" id="2_ee2du"]
 [ext_resource type="Texture2D" uid="uid://dhka1r7vq5yn3" path="res://img/cart.png" id="3_73oxm"]
+[ext_resource type="PackedScene" uid="uid://d2r3d7bjjexfe" path="res://Base/confirm_rect.tscn" id="4_y3s5l"]
 
-[node name="ColorRect" type="ColorRect"]
+[node name="Cart_Screen" type="ColorRect"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 color = Color(0.160784, 0.227451, 0.392157, 1)
-
-script = ExtResource("1_y3s5l")
-
+script = ExtResource("1_pmglc")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -32,24 +30,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.314033, 0.414383, 0.657094, 1)
 
-
-[node name="Profile_btn" type="TextureButton" parent="ColorRect"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 211.0
-offset_top = -17.0
-offset_right = 723.0
-offset_bottom = 495.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.09, 0.09)
-texture_normal = ExtResource("1_y3s5l")
-
-
 [node name="Home_btn" type="TextureButton" parent="ColorRect"]
 layout_mode = 1
 anchors_preset = 8
@@ -57,9 +37,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -259.0
+offset_left = -139.0
 offset_top = -18.0
-offset_right = 253.0
+offset_right = 373.0
 offset_bottom = 494.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -73,9 +53,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -24.0
+offset_left = 96.0
 offset_top = -24.0
-offset_right = 488.0
+offset_right = 608.0
 offset_bottom = 488.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -93,7 +73,7 @@ offset_right = 155.5
 offset_bottom = 175.775
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 29
-text = "Twój koszyk jest pusty"
+text = "Twój koszyk"
 horizontal_alignment = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
@@ -159,23 +139,16 @@ vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 107.205
-offset_top = 145.455
-offset_right = 153.205
-offset_bottom = 173.455
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 431.0
+offset_top = 721.0
+offset_right = 631.0
+offset_bottom = 749.0
 theme_override_font_sizes/font_size = 20
 text = "1000"
-horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ColorRect3" type="ColorRect" parent="."]
+[node name="PaymentScreen" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -190,7 +163,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.160784, 0.227451, 0.392157, 1)
 
-[node name="LineEdit" type="LineEdit" parent="ColorRect3"]
+[node name="LineEdit" type="LineEdit" parent="PaymentScreen"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -206,7 +179,7 @@ grow_vertical = 2
 text = "Metoda płatności"
 alignment = 1
 
-[node name="OptionButton" type="OptionButton" parent="ColorRect3/LineEdit"]
+[node name="OptionButton" type="OptionButton" parent="PaymentScreen/LineEdit"]
 layout_mode = 0
 offset_left = 211.0
 offset_top = 1.0
@@ -225,7 +198,7 @@ popup/item_3/id = 3
 popup/item_4/text = "Przelewy 24"
 popup/item_4/id = 4
 
-[node name="LineEdit2" type="LineEdit" parent="ColorRect3"]
+[node name="LineEdit2" type="LineEdit" parent="PaymentScreen"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -241,7 +214,7 @@ grow_vertical = 2
 text = "Metoda dostawy"
 alignment = 1
 
-[node name="OptionButton" type="OptionButton" parent="ColorRect3/LineEdit2"]
+[node name="OptionButton" type="OptionButton" parent="PaymentScreen/LineEdit2"]
 layout_mode = 0
 offset_left = 211.0
 offset_top = 1.0
@@ -254,7 +227,7 @@ popup/item_0/id = 0
 popup/item_1/text = "Odbiór w sklepie"
 popup/item_1/id = 1
 
-[node name="LineEdit3" type="LineEdit" parent="ColorRect3"]
+[node name="LineEdit3" type="LineEdit" parent="PaymentScreen"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -266,7 +239,7 @@ grow_horizontal = 2
 text = "Dane kontaktowe"
 alignment = 1
 
-[node name="LineEdit3" type="LineEdit" parent="ColorRect3/LineEdit3"]
+[node name="LineEdit3" type="LineEdit" parent="PaymentScreen/LineEdit3"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -278,7 +251,7 @@ offset_bottom = 120.0
 grow_horizontal = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="ColorRect3"]
+[node name="Label" type="Label" parent="PaymentScreen"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -291,7 +264,7 @@ grow_horizontal = 2
 text = "Kraj dostawy"
 horizontal_alignment = 1
 
-[node name="LineEdit4" type="LineEdit" parent="ColorRect3"]
+[node name="LineEdit4" type="LineEdit" parent="PaymentScreen"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -303,7 +276,7 @@ offset_bottom = 205.0
 grow_horizontal = 2
 alignment = 1
 
-[node name="LineEdit5" type="LineEdit" parent="ColorRect3"]
+[node name="LineEdit5" type="LineEdit" parent="PaymentScreen"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -315,7 +288,7 @@ offset_bottom = 290.0
 grow_horizontal = 2
 alignment = 1
 
-[node name="Label3" type="Label" parent="ColorRect3"]
+[node name="Label3" type="Label" parent="PaymentScreen"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -328,7 +301,7 @@ grow_horizontal = 2
 text = "Imię i nazwisko"
 horizontal_alignment = 1
 
-[node name="Label4" type="Label" parent="ColorRect3"]
+[node name="Label4" type="Label" parent="PaymentScreen"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -341,7 +314,7 @@ grow_horizontal = 2
 text = "Adres e-mail"
 horizontal_alignment = 1
 
-[node name="LineEdit6" type="LineEdit" parent="ColorRect3"]
+[node name="LineEdit6" type="LineEdit" parent="PaymentScreen"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -353,7 +326,7 @@ offset_bottom = 375.0
 grow_horizontal = 2
 alignment = 1
 
-[node name="Label5" type="Label" parent="ColorRect3"]
+[node name="Label5" type="Label" parent="PaymentScreen"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -366,7 +339,7 @@ grow_horizontal = 2
 text = "Ulica"
 horizontal_alignment = 1
 
-[node name="LineEdit7" type="LineEdit" parent="ColorRect3"]
+[node name="LineEdit7" type="LineEdit" parent="PaymentScreen"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -378,7 +351,7 @@ offset_bottom = 460.0
 grow_horizontal = 2
 alignment = 1
 
-[node name="LineEdit8" type="LineEdit" parent="ColorRect3"]
+[node name="LineEdit8" type="LineEdit" parent="PaymentScreen"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -390,7 +363,7 @@ offset_bottom = 460.0
 grow_horizontal = 2
 alignment = 1
 
-[node name="Label6" type="Label" parent="ColorRect3"]
+[node name="Label6" type="Label" parent="PaymentScreen"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -403,7 +376,7 @@ grow_horizontal = 2
 text = "Nr domu"
 horizontal_alignment = 1
 
-[node name="Label7" type="Label" parent="ColorRect3"]
+[node name="Label7" type="Label" parent="PaymentScreen"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -416,7 +389,7 @@ grow_horizontal = 2
 text = "Kod pocztowy"
 horizontal_alignment = 1
 
-[node name="LineEdit9" type="LineEdit" parent="ColorRect3"]
+[node name="LineEdit9" type="LineEdit" parent="PaymentScreen"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -428,7 +401,7 @@ offset_bottom = 545.0
 grow_horizontal = 2
 alignment = 1
 
-[node name="Label8" type="Label" parent="ColorRect3"]
+[node name="Label8" type="Label" parent="PaymentScreen"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -441,7 +414,7 @@ grow_horizontal = 2
 text = "Numer telefonu"
 horizontal_alignment = 1
 
-[node name="LineEdit10" type="LineEdit" parent="ColorRect3"]
+[node name="LineEdit10" type="LineEdit" parent="PaymentScreen"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -453,7 +426,7 @@ grow_horizontal = 2
 text = "Dane kontaktowe"
 alignment = 1
 
-[node name="LineEdit3" type="LineEdit" parent="ColorRect3/LineEdit10"]
+[node name="LineEdit3" type="LineEdit" parent="PaymentScreen/LineEdit10"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -465,7 +438,7 @@ offset_bottom = 120.0
 grow_horizontal = 2
 alignment = 1
 
-[node name="LineEdit11" type="LineEdit" parent="ColorRect3"]
+[node name="LineEdit11" type="LineEdit" parent="PaymentScreen"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -481,7 +454,7 @@ grow_vertical = 0
 text = "Płatność i dostawa"
 alignment = 1
 
-[node name="Button" type="Button" parent="ColorRect3"]
+[node name="Button" type="Button" parent="PaymentScreen"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -495,3 +468,11 @@ offset_bottom = -34.085
 grow_horizontal = 2
 grow_vertical = 0
 text = "Sfinaliuj zakup"
+
+[node name="ConfirmPopup" parent="." instance=ExtResource("4_y3s5l")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="ColorRect/Home_btn" to="." method="_on_home_btn_pressed"]
+[connection signal="pressed" from="ColorRect/Cart_btn" to="." method="_on_cart_btn_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
