@@ -18,6 +18,13 @@ var products = {
 	}
 }
 
+var cart = {
+	"Lodówka": {
+		"price": 1000,
+		"type": ProductTypes.AGD
+	}
+}
+
 signal scene_changed
 signal wrong_password
 signal wrong_login
@@ -83,3 +90,13 @@ func button_pressed(prod_type: ProductTypes):
 func _on_main_btn_pressed(prod_type: ProductTypes):
 	var current_scene = get_tree().get_current_scene()
 	current_scene.call_deferred("_on_main_screen_button_pressed", prod_type)
+
+func add_product_to_cart(item_name: String, price: float, type: ProductTypes):
+	var item_desc = {}
+	item_desc.set("price", price)
+	item_desc.set("type", type)
+	cart.set(item_name, item_desc)
+
+func remove_prod_from_cart(item_name: String):
+	if cart.has(item_name) == true:
+		cart.erase(item_name)

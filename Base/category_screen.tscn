@@ -1,17 +1,18 @@
 [gd_scene load_steps=5 format=3 uid="uid://cih3qishmr5g5"]
 
 [ext_resource type="Script" uid="uid://ckbpft3whxb18" path="res://Scripts/category_screen.gd" id="1_yc3yk"]
-[ext_resource type="Texture2D" uid="uid://423f3vr1014e" path="res://img/profile-icon.png" id="2_bcrah"]
 [ext_resource type="Texture2D" uid="uid://4kh527c6v3js" path="res://img/home-icon.png" id="2_j707d"]
 [ext_resource type="Texture2D" uid="uid://dhka1r7vq5yn3" path="res://img/cart.png" id="3_bcrah"]
+[ext_resource type="PackedScene" uid="uid://wkcjukve200j" path="res://Base/confirm_popup.tscn" id="4_bcrah"]
 
-[node name="Control" type="Control"]
+[node name="Category_Screen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_yc3yk")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -64,26 +65,17 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.314033, 0.414383, 0.657094, 1)
 
-[node name="Cart_btn3" type="TextureButton" parent="ColorRect/ColorRect"]
-layout_mode = 1
-offset_left = 512.0
-offset_top = 50.0
-offset_right = 1024.0
-offset_bottom = 562.0
-scale = Vector2(0.09, 0.09)
-texture_normal = ExtResource("2_bcrah")
-
-[node name="Cart_btn2" type="TextureButton" parent="ColorRect/ColorRect"]
+[node name="Home_btn" type="TextureButton" parent="ColorRect/ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -259.0
-offset_top = -25.0
-offset_right = 253.0
-offset_bottom = 487.0
+offset_left = -149.0
+offset_top = -19.0
+offset_right = 363.0
+offset_bottom = 493.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.09, 0.09)
@@ -96,11 +88,29 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -24.0
-offset_top = -25.0
-offset_right = 488.0
-offset_bottom = 487.0
+offset_left = 86.0
+offset_top = -19.0
+offset_right = 598.0
+offset_bottom = 493.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("3_bcrah")
+
+[node name="ConfirmPopup" parent="." instance=ExtResource("4_bcrah")]
+visible = false
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 400.0
+offset_bottom = 200.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[connection signal="pressed" from="ColorRect/ColorRect/Home_btn" to="." method="_on_home_btn_pressed"]
+[connection signal="pressed" from="ColorRect/ColorRect/Cart_btn" to="." method="_on_cart_btn_pressed"]

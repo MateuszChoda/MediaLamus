@@ -1,11 +1,12 @@
 [gd_scene load_steps=2 format=3 uid="uid://713c3k6r77vh"]
 
-[ext_resource type="Script" path="res://Scripts/product_list.gd" id="1_8nsqs"]
+[ext_resource type="Script" uid="uid://brft4vpook2ad" path="res://Scripts/product_list.gd" id="1_8nsqs"]
 
 [node name="ProductList" type="ColorRect"]
 offset_top = 212.0
 offset_right = 648.0
 offset_bottom = 998.0
+mouse_filter = 1
 color = Color(0.160784, 0.227451, 0.392157, 1)
 script = ExtResource("1_8nsqs")
 
