@@ -1,10 +1,11 @@
+
 [gd_scene load_steps=6 format=3 uid="uid://dbukptdxj0cb8"]
 
 [ext_resource type="Script" uid="uid://cv4787yyv4i4u" path="res://Scripts/main_screen.gd" id="1_2l88s"]
+
 [ext_resource type="Texture2D" uid="uid://7ctyucrbyybl" path="res://img/filter-icon.jpg" id="1_o13rx"]
 [ext_resource type="Texture2D" uid="uid://dhka1r7vq5yn3" path="res://img/cart.png" id="2_i7cyh"]
 [ext_resource type="Texture2D" uid="uid://4kh527c6v3js" path="res://img/home-icon.png" id="2_w2f1l"]
-[ext_resource type="PackedScene" uid="uid://58fhia6fwvjx" path="res://Base/product_list.tscn" id="4_w2f1l"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -180,9 +181,11 @@ offset_bottom = 994.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.09, 0.09)
-texture_normal = ExtResource("2_w2f1l")
 
-[node name="Home" type="TextureButton" parent="ColorRect/ColorRect"]
+texture_normal = ExtResource("2_2l88s")
+
+[node name="Home_btn" type="TextureButton" parent="ColorRect/ColorRect"]
+
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -213,6 +216,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("2_i7cyh")
+
 
 [node name="ProductList" parent="." instance=ExtResource("4_w2f1l")]
 visible = false
