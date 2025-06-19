@@ -1,6 +1,10 @@
+<<<<<<< Updated upstream
 
 [gd_scene load_steps=7 format=3 uid="uid://p6ti5rlpxyux"]
 
+=======
+[gd_scene load_steps=7 format=3 uid="uid://p6ti5rlpxyux"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Script" uid="uid://cv4787yyv4i4u" path="res://Scripts/main_screen.gd" id="1_2l88s"]
 [ext_resource type="Texture2D" uid="uid://7ctyucrbyybl" path="res://img/filter-icon.jpg" id="1_o13rx"]
@@ -184,9 +188,13 @@ offset_bottom = 494.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.09, 0.09)
+<<<<<<< Updated upstream
 texture_normal = ExtResource("2_2l88s")
 
 
+=======
+texture_normal = ExtResource("3_fl6ef")
+>>>>>>> Stashed changes
 
 [node name="Home_btn" type="TextureButton" parent="ColorRect/ColorRect"]
 layout_mode = 1
