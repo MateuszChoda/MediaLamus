@@ -7,7 +7,7 @@ var item_price: float
 var item_type: Global.ProductTypes
 
 func _ready() -> void:
-	self.visible = false
+	pass
 
 func _set_data(new_name: String, new_price: float, new_type: Global.ProductTypes):
 	item_name = new_name
