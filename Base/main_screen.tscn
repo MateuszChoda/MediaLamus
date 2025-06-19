@@ -182,7 +182,7 @@ grow_vertical = 2
 scale = Vector2(0.09, 0.09)
 texture_normal = ExtResource("2_w2f1l")
 
-[node name="Home" type="TextureButton" parent="ColorRect/ColorRect"]
+[node name="Home_btn" type="TextureButton" parent="ColorRect/ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
