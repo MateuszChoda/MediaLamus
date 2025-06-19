@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://cqtyb802ooenn"]
+
+[gd_scene load_steps=2 format=3 uid="uid://dilvtyd1sl5qt"]
+
+[ext_resource type="Script" uid="uid://dpd3cgsx6h8b0" path="res://Scripts/register_screen.gd" id="1_rh3ov"]
 
 [node name="RegisterScreen" type="Control"]
 layout_mode = 3
@@ -7,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rh3ov")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -98,7 +102,7 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -219.99
+offset_left = -220.0
 offset_top = 38.0
 offset_right = -105.99
 offset_bottom = 61.0

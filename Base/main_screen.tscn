@@ -1,20 +1,14 @@
-<<<<<<< Updated upstream
 
-[gd_scene load_steps=6 format=3 uid="uid://dbukptdxj0cb8"]
-=======
 [gd_scene load_steps=7 format=3 uid="uid://p6ti5rlpxyux"]
->>>>>>> Stashed changes
+
 
 [ext_resource type="Script" uid="uid://cv4787yyv4i4u" path="res://Scripts/main_screen.gd" id="1_2l88s"]
-
 [ext_resource type="Texture2D" uid="uid://7ctyucrbyybl" path="res://img/filter-icon.jpg" id="1_o13rx"]
 [ext_resource type="Texture2D" uid="uid://dhka1r7vq5yn3" path="res://img/cart.png" id="2_i7cyh"]
 [ext_resource type="Texture2D" uid="uid://4kh527c6v3js" path="res://img/home-icon.png" id="2_w2f1l"]
-<<<<<<< Updated upstream
-=======
 [ext_resource type="Texture2D" uid="uid://423f3vr1014e" path="res://img/profile-icon.png" id="3_fl6ef"]
 [ext_resource type="PackedScene" uid="uid://58fhia6fwvjx" path="res://Base/product_list.tscn" id="4_w2f1l"]
->>>>>>> Stashed changes
+
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -190,15 +184,11 @@ offset_bottom = 494.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.09, 0.09)
-<<<<<<< Updated upstream
-
 texture_normal = ExtResource("2_2l88s")
-=======
-texture_normal = ExtResource("3_fl6ef")
->>>>>>> Stashed changes
+
+
 
 [node name="Home_btn" type="TextureButton" parent="ColorRect/ColorRect"]
-
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -230,12 +220,11 @@ grow_vertical = 2
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("2_i7cyh")
 
-
 [node name="ProductList" parent="." instance=ExtResource("4_w2f1l")]
 visible = false
 layout_mode = 0
-offset_top = 0.0
-offset_bottom = 786.0
+offset_top = 200.0
+offset_bottom = 986.0
 
 [connection signal="text_changed" from="ColorRect/Searchbar" to="ProductList" method="_on_searchbar_text_changed"]
 [connection signal="pressed" from="ColorRect/AGD_btn" to="." method="_on_agd_btn_pressed"]

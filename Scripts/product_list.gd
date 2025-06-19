@@ -8,6 +8,10 @@ func _ready() -> void:
 
 func _on_searchbar_text_changed(new_text: String) -> void:
 	self.visible = true
+	var items = container.get_children()
+	for item in items:
+		container.remove_child(item)
+		item.queue_free()
 	for key in Global.products:
 		if key.contains(new_text):
 			var properties = Global.products[key]
