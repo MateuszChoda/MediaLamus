@@ -99,18 +99,7 @@ texture_normal = ExtResource("3_bcrah")
 
 [node name="ConfirmPopup" parent="." instance=ExtResource("4_bcrah")]
 visible = false
-layout_mode = 0
-anchors_preset = 0
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 400.0
-offset_bottom = 200.0
-grow_horizontal = 1
-grow_vertical = 1
+layout_mode = 1
 
 [connection signal="pressed" from="ColorRect/ColorRect/Home_btn" to="." method="_on_home_btn_pressed"]
 [connection signal="pressed" from="ColorRect/ColorRect/Cart_btn" to="." method="_on_cart_btn_pressed"]
