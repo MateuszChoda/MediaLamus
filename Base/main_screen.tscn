@@ -208,18 +208,7 @@ offset_bottom = 986.0
 
 [node name="ConfirmPopup" parent="." instance=ExtResource("6_fl6ef")]
 visible = false
-layout_mode = 0
-anchors_preset = 0
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 400.0
-offset_bottom = 200.0
-grow_horizontal = 1
-grow_vertical = 1
+layout_mode = 1
 
 [connection signal="text_changed" from="ColorRect/Searchbar" to="ProductList" method="_on_searchbar_text_changed"]
 [connection signal="pressed" from="ColorRect/AGD_btn" to="." method="_on_agd_btn_pressed"]

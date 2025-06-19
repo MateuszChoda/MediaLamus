@@ -470,6 +470,8 @@ grow_vertical = 0
 text = "Sfinalizuj zakup"
 
 [node name="ConfirmPopup" parent="." instance=ExtResource("4_y3s5l")]
+visible = false
+top_level = true
 layout_mode = 1
 
 [connection signal="pressed" from="ColorRect/Home_btn" to="." method="_on_home_btn_pressed"]
