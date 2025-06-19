@@ -1,9 +1,7 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbukptdxj0cb8"]
 
-[gd_scene load_steps=5 format=3 uid="uid://dbukptdxj0cb8"]
-
-
+[ext_resource type="Script" uid="uid://cv4787yyv4i4u" path="res://Scripts/main_screen.gd" id="1_2l88s"]
 [ext_resource type="Texture2D" uid="uid://7ctyucrbyybl" path="res://img/filter-icon.jpg" id="1_o13rx"]
-[ext_resource type="Texture2D" uid="uid://423f3vr1014e" path="res://img/profile-icon.png" id="2_2l88s"]
 [ext_resource type="Texture2D" uid="uid://dhka1r7vq5yn3" path="res://img/cart.png" id="2_i7cyh"]
 [ext_resource type="Texture2D" uid="uid://4kh527c6v3js" path="res://img/home-icon.png" id="2_w2f1l"]
 [ext_resource type="PackedScene" uid="uid://58fhia6fwvjx" path="res://Base/product_list.tscn" id="4_w2f1l"]
@@ -15,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2l88s")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -55,7 +54,7 @@ grow_horizontal = 0
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("1_o13rx")
 
-[node name="Button" type="Button" parent="ColorRect"]
+[node name="AGD_btn" type="Button" parent="ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -70,7 +69,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "AGD"
 
-[node name="Button2" type="Button" parent="ColorRect"]
+[node name="RTV_btn" type="Button" parent="ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -87,7 +86,7 @@ text = "RTV
 
 "
 
-[node name="Button3" type="Button" parent="ColorRect"]
+[node name="PC_btn" type="Button" parent="ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -103,7 +102,7 @@ grow_vertical = 2
 text = "KOMPUTERY OSOBISTE
 "
 
-[node name="Button4" type="Button" parent="ColorRect"]
+[node name="Smartphone_btn" type="Button" parent="ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -119,7 +118,7 @@ grow_vertical = 2
 text = "SMARTFONY
 "
 
-[node name="Button5" type="Button" parent="ColorRect"]
+[node name="Audio_btn" type="Button" parent="ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -135,7 +134,7 @@ grow_vertical = 2
 text = "AUDIO
 "
 
-[node name="Button6" type="Button" parent="ColorRect"]
+[node name="Gaming_btn" type="Button" parent="ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -167,9 +166,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.314033, 0.414383, 0.657094, 1)
 
-
 [node name="Profile_btn" type="TextureButton" parent="ColorRect/ColorRect"]
-
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -177,17 +174,15 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 211.0
-offset_top = -17.0
+offset_top = 482.0
 offset_right = 723.0
-offset_bottom = 495.0
+offset_bottom = 994.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.09, 0.09)
-texture_normal = ExtResource("2_2l88s")
+texture_normal = ExtResource("2_w2f1l")
 
-
-[node name="Home_btn" type="TextureButton" parent="ColorRect/ColorRect"]
-
+[node name="Home" type="TextureButton" parent="ColorRect/ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -195,9 +190,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -259.0
-offset_top = -18.0
+offset_top = 481.0
 offset_right = 253.0
-offset_bottom = 494.0
+offset_bottom = 993.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.09, 0.09)
@@ -211,9 +206,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -24.0
-offset_top = -24.0
+offset_top = 475.0
 offset_right = 488.0
-offset_bottom = 488.0
+offset_bottom = 987.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.1, 0.1)
@@ -226,3 +221,9 @@ offset_top = 0.0
 offset_bottom = 786.0
 
 [connection signal="text_changed" from="ColorRect/Searchbar" to="ProductList" method="_on_searchbar_text_changed"]
+[connection signal="pressed" from="ColorRect/AGD_btn" to="." method="_on_agd_btn_pressed"]
+[connection signal="pressed" from="ColorRect/RTV_btn" to="." method="_on_rtv_btn_pressed"]
+[connection signal="pressed" from="ColorRect/PC_btn" to="." method="_on_pc_btn_pressed"]
+[connection signal="pressed" from="ColorRect/Smartphone_btn" to="." method="_on_smartphone_btn_pressed"]
+[connection signal="pressed" from="ColorRect/Audio_btn" to="." method="_on_audio_btn_pressed"]
+[connection signal="pressed" from="ColorRect/Gaming_btn" to="." method="_on_gaming_btn_pressed"]

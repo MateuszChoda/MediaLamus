@@ -12,5 +12,5 @@ func _ready() -> void:
 
 func add_new(new_name: String, new_price: float, new_type: Global.ProductTypes):
 	name_label.text = new_name
-	price_label.text = new_price
+	price_label.text = str(new_price).pad_decimals(2)
 	type = new_type
