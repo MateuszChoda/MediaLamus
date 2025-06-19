@@ -171,6 +171,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.314033, 0.414383, 0.657094, 1)
 
+<<<<<<< Updated upstream
 [node name="Profile_btn" type="TextureButton" parent="ColorRect/ColorRect"]
 layout_mode = 1
 anchors_preset = 8
@@ -187,6 +188,8 @@ grow_vertical = 2
 scale = Vector2(0.09, 0.09)
 texture_normal = ExtResource("3_fl6ef")
 
+=======
+>>>>>>> Stashed changes
 [node name="Home_btn" type="TextureButton" parent="ColorRect/ColorRect"]
 layout_mode = 1
 anchors_preset = 8
@@ -194,10 +197,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+<<<<<<< Updated upstream
 offset_left = -259.0
 offset_top = -18.0
 offset_right = 253.0
 offset_bottom = 494.0
+=======
+offset_left = -146.0
+offset_top = -20.0
+offset_right = 366.0
+offset_bottom = 492.0
+>>>>>>> Stashed changes
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.09, 0.09)
@@ -210,10 +220,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+<<<<<<< Updated upstream
 offset_left = -24.0
 offset_top = -18.0
 offset_right = 488.0
 offset_bottom = 494.0
+=======
+offset_left = 89.0
+offset_top = -20.0
+offset_right = 601.0
+offset_bottom = 492.0
+>>>>>>> Stashed changes
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.1, 0.1)
@@ -232,3 +249,5 @@ offset_bottom = 986.0
 [connection signal="pressed" from="ColorRect/Smartphone_btn" to="." method="_on_smartphone_btn_pressed"]
 [connection signal="pressed" from="ColorRect/Audio_btn" to="." method="_on_audio_btn_pressed"]
 [connection signal="pressed" from="ColorRect/Gaming_btn" to="." method="_on_gaming_btn_pressed"]
+[connection signal="pressed" from="ColorRect/ColorRect/Home_btn" to="." method="_on_home_btn_pressed"]
+[connection signal="pressed" from="ColorRect/ColorRect/Cart_btn" to="." method="_on_cart_btn_pressed"]

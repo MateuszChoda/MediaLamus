@@ -25,3 +25,11 @@ func _on_audio_btn_pressed() -> void:
 
 func _on_gaming_btn_pressed() -> void:
 	Global.button_pressed(Global.ProductTypes.GAMING)
+
+
+func _on_home_btn_pressed() -> void:
+	Global.change_scene("res://Base/main_screen.tscn")
+
+
+func _on_cart_btn_pressed() -> void:
+	Global.change_scene("res://Base/cart_screen.tscn")
