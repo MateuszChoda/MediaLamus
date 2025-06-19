@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbukptdxj0cb8"]
+[gd_scene load_steps=6 format=3 uid="uid://dbukptdxj0cb8"]
 
+[ext_resource type="Script" uid="uid://cv4787yyv4i4u" path="res://Scripts/main_screen.gd" id="1_2l88s"]
 [ext_resource type="Texture2D" uid="uid://7ctyucrbyybl" path="res://img/filter-icon.jpg" id="1_o13rx"]
 [ext_resource type="Texture2D" uid="uid://dhka1r7vq5yn3" path="res://img/cart.png" id="2_i7cyh"]
 [ext_resource type="Texture2D" uid="uid://4kh527c6v3js" path="res://img/home-icon.png" id="2_w2f1l"]
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2l88s")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -164,7 +166,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.314033, 0.414383, 0.657094, 1)
 
-[node name="Cart_btn3" type="TextureButton" parent="ColorRect/ColorRect"]
+[node name="Profile" type="TextureButton" parent="ColorRect/ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -180,7 +182,7 @@ grow_vertical = 2
 scale = Vector2(0.09, 0.09)
 texture_normal = ExtResource("2_w2f1l")
 
-[node name="Cart_btn2" type="TextureButton" parent="ColorRect/ColorRect"]
+[node name="Home" type="TextureButton" parent="ColorRect/ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -219,3 +221,4 @@ offset_top = 0.0
 offset_bottom = 786.0
 
 [connection signal="text_changed" from="ColorRect/Searchbar" to="ProductList" method="_on_searchbar_text_changed"]
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]
