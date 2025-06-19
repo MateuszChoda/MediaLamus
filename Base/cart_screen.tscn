@@ -467,7 +467,7 @@ offset_right = 100.0
 offset_bottom = -34.085
 grow_horizontal = 2
 grow_vertical = 0
-text = "Sfinaliuj zakup"
+text = "Sfinalizuj zakup"
 
 [node name="ConfirmPopup" parent="." instance=ExtResource("4_y3s5l")]
 layout_mode = 1
