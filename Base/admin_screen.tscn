@@ -1,0 +1,448 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbv1gx8d1vsog"]
+
+[ext_resource type="Script" uid="uid://daxsmbguqc50k" path="res://Scripts/admin_screen.gd" id="1_dix53"]
+[ext_resource type="Texture2D" uid="uid://4kh527c6v3js" path="res://img/home-icon.png" id="2_3d02y"]
+[ext_resource type="Texture2D" uid="uid://dhka1r7vq5yn3" path="res://img/cart.png" id="3_qa5fi"]
+[ext_resource type="Texture2D" uid="uid://7ctyucrbyybl" path="res://img/filter-icon.jpg" id="4_kjk8t"]
+[ext_resource type="PackedScene" uid="uid://58fhia6fwvjx" path="res://Base/product_list.tscn" id="5_3d02y"]
+
+[node name="Admin_Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dix53")
+
+[node name="BackgroundRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.160784, 0.227451, 0.392157, 1)
+
+[node name="ColorRect" type="ColorRect" parent="BackgroundRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -324.0
+offset_top = 424.0
+offset_right = 324.0
+offset_bottom = 574.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.314033, 0.414383, 0.657094, 1)
+
+[node name="Cart_btn3" type="TextureButton" parent="BackgroundRect/ColorRect"]
+layout_mode = 1
+offset_left = 512.0
+offset_top = 50.0
+offset_right = 1024.0
+offset_bottom = 562.0
+scale = Vector2(0.09, 0.09)
+texture_normal = ExtResource("2_3d02y")
+
+[node name="Cart_btn2" type="TextureButton" parent="BackgroundRect/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -259.0
+offset_top = -25.0
+offset_right = 253.0
+offset_bottom = 487.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.09, 0.09)
+texture_normal = ExtResource("2_3d02y")
+
+[node name="Cart_btn" type="TextureButton" parent="BackgroundRect/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -25.0
+offset_right = 488.0
+offset_bottom = 487.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("3_qa5fi")
+
+[node name="LoginLabel" type="Label" parent="BackgroundRect"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 92.0
+offset_bottom = 103.0
+theme_override_font_sizes/font_size = 38
+text = "Witaj
+"
+
+[node name="Searchbar" type="LineEdit" parent="BackgroundRect"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 120.0
+offset_right = 545.0
+offset_bottom = 170.0
+
+[node name="Filters_btn" type="TextureButton" parent="BackgroundRect"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -76.0
+offset_top = 119.0
+offset_right = 424.0
+offset_bottom = 619.0
+grow_horizontal = 0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("4_kjk8t")
+
+[node name="AddProduct" type="Button" parent="BackgroundRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -293.0
+offset_top = -350.0
+offset_right = 293.0
+offset_bottom = -250.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Dodaj produkt"
+
+[node name="DeleteProduct" type="Button" parent="BackgroundRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -293.0
+offset_top = -230.0
+offset_right = 293.0
+offset_bottom = -130.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Usuń produkt"
+
+[node name="DeleteUser" type="Button" parent="BackgroundRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -293.0
+offset_top = -110.0
+offset_right = 293.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Usuń użytkownika"
+
+[node name="AddProductScreen" type="ColorRect" parent="BackgroundRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -940.0
+offset_bottom = -154.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.160784, 0.227451, 0.392157, 1)
+
+[node name="AddProductName" type="LineEdit" parent="BackgroundRect/AddProductScreen"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -224.0
+offset_top = 200.0
+offset_right = -24.0
+offset_bottom = 231.0
+grow_horizontal = 2
+placeholder_text = "Podaj nazwę produktu"
+
+[node name="ProductPrice" type="LineEdit" parent="BackgroundRect/AddProductScreen"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -224.0
+offset_top = 250.0
+offset_right = -24.0
+offset_bottom = 281.0
+grow_horizontal = 2
+placeholder_text = "Podaj cenę produktu"
+
+[node name="MenuButton" type="OptionButton" parent="BackgroundRect/AddProductScreen"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -224.0
+offset_top = 150.0
+offset_right = -25.0
+offset_bottom = 181.0
+grow_horizontal = 2
+item_count = 6
+popup/item_0/text = "AGD"
+popup/item_0/id = 0
+popup/item_1/text = "RTV"
+popup/item_1/id = 1
+popup/item_2/text = "Komputery osobiste"
+popup/item_2/id = 2
+popup/item_3/text = "Smartfony"
+popup/item_3/id = 3
+popup/item_4/text = "Audio"
+popup/item_4/id = 4
+popup/item_5/text = "Gaming"
+popup/item_5/id = 5
+
+[node name="Label" type="Label" parent="BackgroundRect/AddProductScreen"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -196.5
+offset_top = 50.0
+offset_right = 196.5
+offset_bottom = 105.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "Dodaj nowy produkt"
+
+[node name="Add" type="Button" parent="BackgroundRect/AddProductScreen"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -224.0
+offset_top = 300.0
+offset_right = -104.0
+offset_bottom = 331.0
+grow_horizontal = 2
+text = "Dodaj produkt"
+
+[node name="Return" type="Button" parent="BackgroundRect/AddProductScreen"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -198.0
+offset_top = -86.0
+offset_right = -77.0
+offset_bottom = -55.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Wróć do menu"
+
+[node name="Warning" type="Label" parent="BackgroundRect/AddProductScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 110.0
+offset_right = 200.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="DeleteProductScreen" type="ColorRect" parent="BackgroundRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -940.0
+offset_bottom = -154.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.160784, 0.227451, 0.392157, 1)
+
+[node name="DelProductName" type="LineEdit" parent="BackgroundRect/DeleteProductScreen"]
+layout_mode = 1
+offset_left = 100.0
+offset_top = 150.0
+offset_right = 400.0
+offset_bottom = 181.0
+placeholder_text = "Wpisz nazwę produktu"
+
+[node name="Delete" type="Button" parent="BackgroundRect/DeleteProductScreen"]
+layout_mode = 1
+offset_left = 100.0
+offset_top = 700.0
+offset_right = 215.0
+offset_bottom = 731.0
+text = "Usuń produkt"
+
+[node name="Return" type="Button" parent="BackgroundRect/DeleteProductScreen"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -198.0
+offset_top = -86.0
+offset_right = -77.0
+offset_bottom = -55.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Wróć do menu"
+
+[node name="Label" type="Label" parent="BackgroundRect/DeleteProductScreen"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -133.0
+offset_top = 50.0
+offset_right = 133.0
+offset_bottom = 105.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "Usuń produkt"
+
+[node name="Warning" type="Label" parent="BackgroundRect/DeleteProductScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 110.0
+offset_right = 200.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="DeleteUserScreen" type="ColorRect" parent="BackgroundRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -940.0
+offset_bottom = -154.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.160784, 0.227451, 0.392157, 1)
+
+[node name="UserName" type="LineEdit" parent="BackgroundRect/DeleteUserScreen"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 150.0
+offset_right = 400.0
+offset_bottom = 181.0
+placeholder_text = "Podaj email użytkownika"
+
+[node name="DelUser" type="Button" parent="BackgroundRect/DeleteUserScreen"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 200.0
+offset_right = 250.0
+offset_bottom = 231.0
+text = "Usuń użytkownika"
+
+[node name="Return" type="Button" parent="BackgroundRect/DeleteUserScreen"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -198.0
+offset_top = -86.0
+offset_right = -77.0
+offset_bottom = -55.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Wróć do menu"
+
+[node name="Label" type="Label" parent="BackgroundRect/DeleteUserScreen"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -177.5
+offset_top = 50.0
+offset_right = 177.5
+offset_bottom = 105.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "Usuń użytkownika"
+
+[node name="Warning" type="Label" parent="BackgroundRect/DeleteUserScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 110.0
+offset_right = 200.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ProductList" parent="." instance=ExtResource("5_3d02y")]
+visible = false
+layout_mode = 0
+offset_top = 0.0
+offset_bottom = 786.0
+
+[connection signal="text_changed" from="BackgroundRect/Searchbar" to="ProductList" method="_on_searchbar_text_changed"]
+[connection signal="pressed" from="BackgroundRect/AddProduct" to="." method="_on_add_product_pressed"]
+[connection signal="pressed" from="BackgroundRect/DeleteProduct" to="." method="_on_delete_product_pressed"]
+[connection signal="pressed" from="BackgroundRect/DeleteUser" to="." method="_on_delete_user_pressed"]
+[connection signal="text_changed" from="BackgroundRect/AddProductScreen/AddProductName" to="." method="_on_product_name_text_changed"]
+[connection signal="text_submitted" from="BackgroundRect/AddProductScreen/AddProductName" to="." method="_on_product_name_text_submitted"]
+[connection signal="text_changed" from="BackgroundRect/AddProductScreen/ProductPrice" to="." method="_on_product_price_text_changed"]
+[connection signal="text_submitted" from="BackgroundRect/AddProductScreen/ProductPrice" to="." method="_on_product_price_text_submitted"]
+[connection signal="pressed" from="BackgroundRect/AddProductScreen/Add" to="." method="_on_add_pressed"]
+[connection signal="pressed" from="BackgroundRect/AddProductScreen/Return" to="." method="_on_return_pressed"]
+[connection signal="text_changed" from="BackgroundRect/DeleteProductScreen/DelProductName" to="." method="_on_del_product_name_text_changed"]
+[connection signal="pressed" from="BackgroundRect/DeleteProductScreen/Delete" to="." method="_on_delete_pressed"]
+[connection signal="pressed" from="BackgroundRect/DeleteProductScreen/Return" to="." method="_on_return_pressed"]
+[connection signal="text_changed" from="BackgroundRect/DeleteUserScreen/UserName" to="." method="_on_user_name_text_changed"]
+[connection signal="pressed" from="BackgroundRect/DeleteUserScreen/DelUser" to="." method="_on_del_user_pressed"]
+[connection signal="pressed" from="BackgroundRect/DeleteUserScreen/Return" to="." method="_on_return_pressed"]
