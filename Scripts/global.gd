@@ -10,12 +10,18 @@ var login_data = {
 	"admin": "admin"
 }
 
-var products = {}
+var products = {
+	"Lodówka": {
+		"price": 1000,
+		"type": ProductTypes.AGD
+	}
+}
 
 signal scene_changed
 signal wrong_password
 signal wrong_login
 signal mismatched_password
+signal main_screen_btn_pressed
 
 func _ready() -> void:
 	current_scene_name = get_tree().get_current_scene().name
@@ -67,3 +73,11 @@ func product_deleted(prod_name: String):
 func user_deleted(user_name: String):
 	if login_data.has(user_name):
 		login_data.erase(user_name)
+
+func button_pressed(prod_type: ProductTypes):
+	change_scene("res://Base/category_screen.tscn")
+	call_deferred("_on_main_btn_pressed", prod_type)
+
+func _on_main_btn_pressed(prod_type: ProductTypes):
+	var current_scene = get_tree().get_current_scene()
+	current_scene.call_deferred("_on_main_screen_button_pressed", prod_type)
