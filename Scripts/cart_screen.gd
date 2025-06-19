@@ -3,11 +3,13 @@ extends ColorRect
 @onready var payment_screen = $PaymentScreen
 @onready var container = $ScrollContainer/VBoxContainer
 @onready var item: PackedScene = preload("res://Base/template.tscn")
+@onready var confirm_popup = $ConfirmPopup
 
 var total: float
 
 func _ready() -> void:
 	payment_screen.visible = false
+	confirm_popup.visible = false
 	for key in Global.cart:
 		var properties = Global.cart[key]
 		var new_item = item.instantiate()
