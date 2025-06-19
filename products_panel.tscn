@@ -1,0 +1,85 @@
+[gd_scene load_steps=4 format=3 uid="uid://pnnuld74apjm"]
+
+[ext_resource type="Texture2D" uid="uid://423f3vr1014e" path="res://img/profile-icon.png" id="1_yllxa"]
+[ext_resource type="Texture2D" uid="uid://4kh527c6v3js" path="res://img/home-icon.png" id="2_53f6a"]
+[ext_resource type="Texture2D" uid="uid://dhka1r7vq5yn3" path="res://img/cart.png" id="3_ewn1c"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.160784, 0.227451, 0.392157, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -324.0
+offset_top = 424.0
+offset_right = 324.0
+offset_bottom = 574.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.314033, 0.414383, 0.657094, 1)
+
+[node name="Profile_btn" type="TextureButton" parent="ColorRect/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 211.0
+offset_top = -17.0
+offset_right = 723.0
+offset_bottom = 495.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.09, 0.09)
+texture_normal = ExtResource("1_yllxa")
+
+[node name="Home_btn" type="TextureButton" parent="ColorRect/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -259.0
+offset_top = -18.0
+offset_right = 253.0
+offset_bottom = 494.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.09, 0.09)
+texture_normal = ExtResource("2_53f6a")
+
+[node name="Cart_btn" type="TextureButton" parent="ColorRect/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 488.0
+offset_bottom = 488.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("3_ewn1c")
