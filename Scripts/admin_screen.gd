@@ -130,3 +130,11 @@ func _on_del_user_pressed() -> void:
 		delUserWarn.text = "Użytkownik usunięty!"
 	else:
 		delUserWarn.text = "Podany użytkownik nie istnieje!"
+
+
+func _on_cart_btn_pressed() -> void:
+	Global.change_scene("res://Base/cart_screen.tscn")
+
+
+func _on_home_btn_pressed() -> void:
+	Global.change_scene("res://Base/admin_screen.tscn")

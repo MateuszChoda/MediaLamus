@@ -1,7 +1,6 @@
 
 [gd_scene load_steps=7 format=3 uid="uid://p6ti5rlpxyux"]
 
-
 [ext_resource type="Script" uid="uid://cv4787yyv4i4u" path="res://Scripts/main_screen.gd" id="1_2l88s"]
 [ext_resource type="Texture2D" uid="uid://7ctyucrbyybl" path="res://img/filter-icon.jpg" id="1_o13rx"]
 [ext_resource type="Texture2D" uid="uid://dhka1r7vq5yn3" path="res://img/cart.png" id="2_i7cyh"]
@@ -187,7 +186,6 @@ scale = Vector2(0.09, 0.09)
 texture_normal = ExtResource("2_2l88s")
 
 
-
 [node name="Home_btn" type="TextureButton" parent="ColorRect/ColorRect"]
 layout_mode = 1
 anchors_preset = 8
@@ -233,3 +231,5 @@ offset_bottom = 986.0
 [connection signal="pressed" from="ColorRect/Smartphone_btn" to="." method="_on_smartphone_btn_pressed"]
 [connection signal="pressed" from="ColorRect/Audio_btn" to="." method="_on_audio_btn_pressed"]
 [connection signal="pressed" from="ColorRect/Gaming_btn" to="." method="_on_gaming_btn_pressed"]
+[connection signal="pressed" from="ColorRect/ColorRect/Home_btn" to="." method="_on_home_btn_pressed"]
+[connection signal="pressed" from="ColorRect/ColorRect/Cart_btn" to="." method="_on_cart_btn_pressed"]

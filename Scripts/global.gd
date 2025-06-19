@@ -3,6 +3,7 @@ extends Node
 var current_scene_name
 var save_path = "user://save.json"
 var loading = false
+var administrator = false
 
 enum ProductTypes {AGD, RTV, PERSONAL_COMPUTER, SMARTPHONE, AUDIO, GAMING}
 
@@ -42,6 +43,7 @@ func sign_in_pressed(login, password, scene_path):
 	if login == "admin":
 		if password == "admin":
 			change_scene("res://Base/admin_screen.tscn")
+			administrator = true
 	elif login_data.has(login):
 		if login_data.get(login) == password:
 			change_scene(scene_path)
