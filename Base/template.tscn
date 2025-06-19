@@ -4,11 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://423f3vr1014e" path="res://img/profile-icon.png" id="2_5r6uv"]
 
 [node name="Template" type="ColorRect"]
+custom_minimum_size = Vector2(648, 100)
 layout_direction = 2
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
-offset_bottom = 100.0
+anchor_bottom = 1.0
 grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0.507233, 0.31501, 0.600562, 1)
