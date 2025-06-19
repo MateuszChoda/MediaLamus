@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://4kh527c6v3js" path="res://img/home-icon.png" id="2_3d02y"]
 [ext_resource type="Texture2D" uid="uid://dhka1r7vq5yn3" path="res://img/cart.png" id="3_qa5fi"]
 [ext_resource type="Texture2D" uid="uid://7ctyucrbyybl" path="res://img/filter-icon.jpg" id="4_kjk8t"]
-[ext_resource type="PackedScene" path="res://Base/product_list.tscn" id="5_3d02y"]
+[ext_resource type="PackedScene" uid="uid://713c3k6r77vh" path="res://Base/product_list.tscn" id="5_3d02y"]
 
 [node name="Admin_Screen" type="Control"]
 layout_mode = 3

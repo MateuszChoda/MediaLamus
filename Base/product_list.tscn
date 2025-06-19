@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://58fhia6fwvjx"]
+[gd_scene load_steps=2 format=3 uid="uid://713c3k6r77vh"]
 
-[ext_resource type="Script" uid="uid://brft4vpook2ad" path="res://Scripts/product_list.gd" id="1_8nsqs"]
+[ext_resource type="Script" path="res://Scripts/product_list.gd" id="1_8nsqs"]
 
 [node name="ProductList" type="ColorRect"]
 offset_top = 212.0
