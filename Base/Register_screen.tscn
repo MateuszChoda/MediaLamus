@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dilvtyd1sl5qt"]
+[gd_scene load_steps=3 format=3 uid="uid://dilvtyd1sl5qt"]
 
 [ext_resource type="Script" uid="uid://dpd3cgsx6h8b0" path="res://Scripts/register_screen.gd" id="1_rh3ov"]
+[ext_resource type="Texture2D" uid="uid://37bauyweetiq" path="res://img/MediaLamusLogo.png" id="2_ftxkf"]
 
 [node name="RegisterScreen" type="Control"]
 layout_mode = 3
@@ -156,6 +157,17 @@ theme_override_colors/font_color = Color(1, 0, 0, 1)
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_right = 200.0
+offset_bottom = 400.0
+grow_horizontal = 2
+texture = ExtResource("2_ftxkf")
 
 [connection signal="text_changed" from="ColorRect/Login" to="." method="_on_login_text_changed"]
 [connection signal="text_submitted" from="ColorRect/Login" to="." method="_on_login_text_submitted"]

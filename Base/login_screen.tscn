@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2md5qoi0oyxh"]
+[gd_scene load_steps=3 format=3 uid="uid://b2md5qoi0oyxh"]
 
 [ext_resource type="Script" uid="uid://basnav6i7lhxj" path="res://Scripts/login_screen.gd" id="1_85wjt"]
+[ext_resource type="Texture2D" uid="uid://37bauyweetiq" path="res://img/MediaLamusLogo.png" id="2_skwj0"]
 
 [node name="LoginScreen" type="Control"]
 layout_mode = 3
@@ -130,6 +131,17 @@ theme_override_colors/font_color = Color(1, 0, 0, 1)
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_right = 200.0
+offset_bottom = 400.0
+grow_horizontal = 2
+texture = ExtResource("2_skwj0")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="text_changed" from="Background/Login" to="." method="_on_login_text_changed"]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://p6ti5rlpxyux"]
+[gd_scene load_steps=8 format=3 uid="uid://p6ti5rlpxyux"]
 
 [ext_resource type="Script" uid="uid://cv4787yyv4i4u" path="res://Scripts/main_screen.gd" id="1_2l88s"]
 [ext_resource type="Texture2D" uid="uid://7ctyucrbyybl" path="res://img/filter-icon.jpg" id="1_o13rx"]
 [ext_resource type="Texture2D" uid="uid://dhka1r7vq5yn3" path="res://img/cart.png" id="2_i7cyh"]
 [ext_resource type="Texture2D" uid="uid://4kh527c6v3js" path="res://img/home-icon.png" id="2_w2f1l"]
 [ext_resource type="PackedScene" uid="uid://713c3k6r77vh" path="res://Base/product_list.tscn" id="4_w2f1l"]
+[ext_resource type="Texture2D" uid="uid://37bauyweetiq" path="res://img/MediaLamusLogo.png" id="5_8cvbr"]
 [ext_resource type="PackedScene" uid="uid://wkcjukve200j" path="res://Base/confirm_popup.tscn" id="6_fl6ef"]
 
 [node name="Main_Screen" type="Control"]
@@ -195,6 +196,18 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("2_i7cyh")
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -140.0
+offset_right = 260.0
+offset_bottom = 400.0
+grow_horizontal = 0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_8cvbr")
 
 [node name="ProductList" parent="." instance=ExtResource("4_w2f1l")]
 visible = false
